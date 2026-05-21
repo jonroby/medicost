@@ -4,6 +4,22 @@ globs: "*.ts, *.tsx, *.html, *.css, *.js, *.jsx, package.json"
 alwaysApply: false
 ---
 
+# Medicost
+
+Parses hospitals' legally-required price-transparency CSVs into SQLite so prices are
+searchable. One charge = one procedure at one price for one payer; a hospital has many
+charges.
+
+- `src/init-db.ts` — create the SQLite schema
+- `src/ingest.ts` — stream a hospital's CSV into the DB (built for NYU Langone Tisch's wide-format file)
+- `src/query.ts` — CLI search (by description or billing code)
+- `src/server.ts` — Hono API: `GET /api/search?billing_code=&description=` (filters ANDed)
+
+Data lives in `data/raw/` and `*.db` (both gitignored). Heading toward a free web app
+with code + zip search across many NYC hospitals.
+
+---
+
 Default to using Bun instead of Node.js.
 
 - Use `bun <file>` instead of `node <file>` or `ts-node <file>`
