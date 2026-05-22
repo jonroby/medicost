@@ -1,0 +1,13 @@
+{
+  "name": "@medicost/db",
+  "type": "module",
+  "private": true,
+  "exports": {
+    ".": "./src/index.ts",
+    "./schema": "./src/schema.ts",
+    "./types": "./src/types.ts"
+  },
+  "scripts": {
+    "migrate": "bun run src/migrate.ts"
+  }
+}

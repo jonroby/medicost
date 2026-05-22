@@ -34,10 +34,9 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 .DS_Store
 
 # Local Claude Code workspace (notes, roadmap)
-.claude/
+.claude/progress.md
 
-# Medicost: raw hospital data dumps (large) and the SQLite database
-data/raw/
-*.db
-*.db-shm
-*.db-wal
+# Medicost: raw hospital data dumps (large) and local pg_dump output
+packages/sources/data/
+*.dump
+*.sql.gz

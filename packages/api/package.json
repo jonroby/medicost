@@ -1,0 +1,13 @@
+{
+  "name": "@medicost/api",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "dev": "bun --hot src/server.ts",
+    "start": "bun src/server.ts"
+  },
+  "dependencies": {
+    "@medicost/db": "workspace:*",
+    "hono": "^4.12.21"
+  }
+}
