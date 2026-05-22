@@ -1,22 +1,57 @@
 ---
-description: Use Bun instead of Node.js, npm, pnpm, or vite.
+description: Use Bun instead of Node.js, npm, or pnpm. (The client package uses Vite — see below.)
 globs: "*.ts, *.tsx, *.html, *.css, *.js, *.jsx, package.json"
 alwaysApply: false
 ---
 
 # Medicost
 
-Parses hospitals' legally-required price-transparency CSVs into SQLite so prices are
+Parses hospitals' legally-required price-transparency CSVs into Postgres so prices are
 searchable. One charge = one procedure at one price for one payer; a hospital has many
 charges.
 
-- `src/init-db.ts` — create the SQLite schema
-- `src/ingest.ts` — stream a hospital's CSV into the DB (built for NYU Langone Tisch's wide-format file)
-- `src/query.ts` — CLI search (by description or billing code)
-- `src/server.ts` — Hono API: `GET /api/search?billing_code=&description=` (filters ANDed)
+## Layout — a Bun workspace monorepo (`packages/*`)
 
-Data lives in `data/raw/` and `*.db` (both gitignored). Heading toward a free web app
-with code + zip search across many NYC hospitals.
+- `packages/db` (`@medicost/db`) — the shared core: Postgres schema, the `Bun.sql`
+  connection (from `DATABASE_URL`), and shared row types. `bun run db:migrate` applies
+  the schema. Both `api` and `sources` import from here; nothing imports *them*.
+- `packages/api` (`@medicost/api`) — Hono API on Bun: `GET /api/health` and
+  `GET /api/search?billing_code=&description=` (filters ANDed). Async `Bun.sql` queries.
+  Port auto-increments from `PORT` (or 3000) so parallel-worktree servers don't collide.
+- `packages/sources` (`@medicost/sources`) — one file per hospital (e.g.
+  `nyu-langone-tisch.ts`) that parses that hospital's machine-readable file and calls
+  `ingestHospital()` in `lib.ts`. Ingest is **per-hospital and idempotent**: re-running a
+  source replaces only that hospital's charges, in a transaction. This is the open-source
+  contribution surface — add a hospital by adding a file.
+- `packages/client` (`@medicost/client`) — React + Vite frontend. Talks to `api` over
+  HTTP only (never touches Postgres). Builds to static `dist/`.
+
+Root scripts: `db:migrate`, `ingest`, `api:dev`, `client:dev` (each is a `bun run --filter`).
+
+## Database & deployment
+
+- **Postgres** (local for dev/ingest, Railway managed in prod), accessed via `Bun.sql`.
+  Local dev DB: `postgres://localhost:5432/medicost`. Use the **latest** Postgres major
+  (currently 18; keep local and Railway versions matched for clean dumps).
+- **Heavy work runs locally; prod just serves.** Ingest hospital files into *local*
+  Postgres, then sync to Railway. For now sync is a full `pg_dump` → restore:
+  ```sh
+  pg_dump "$LOCAL_DATABASE_URL" | psql "$RAILWAY_DATABASE_URL"
+  ```
+  Once there are several hospitals, switch to per-hospital ingest straight against
+  Railway's `DATABASE_URL` (the schema is partitioned by `hospital_id`, so this only
+  moves one hospital's rows and never rewrites the rest).
+- **Railway**: two app services — `api` and `client` — plus one managed Postgres. The
+  client bakes the api's URL in at build via `VITE_API_URL`. No volumes (Postgres replaces
+  the old SQLite-file-on-disk approach).
+
+Raw hospital dumps live in `packages/sources/data/raw/` (gitignored). Heading toward a free web app with
+code + zip search across many NYC hospitals.
+
+> **Vite exception:** the rules below say "don't use Vite" — that was written when this
+> was a Bun-only backend. It still holds for `db`/`api`/`sources`. The **`client`**
+> package deliberately uses React + Vite for frontend DX; Bun still installs and runs it
+> (`bun install`, `bun run --filter @medicost/client dev`), but Vite is its bundler.
 
 ---
 
