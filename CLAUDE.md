@@ -6,47 +6,62 @@ alwaysApply: false
 
 # Medicost
 
-Parses hospitals' legally-required price-transparency CSVs into Postgres so prices are
-searchable. One charge = one procedure at one price for one payer; a hospital has many
-charges.
+Fetches hospitals' legally-required price-transparency files (MRFs), parses them into
+Postgres, and serves them as searchable prices. One **charge** = one procedure's
+negotiated rate for one payer/plan; a procedure has many charges, a hospital has many
+procedures. Scope (for now): **NYC** hospitals.
+
+**Guiding principle — keep what a patient would search for.** Store the source losslessly
+on disk, but the DB holds only **patient-shoppable** procedures (standardized CPT / HCPCS /
+DRG codes), not chargemaster noise (internal CDM/RC codes, drugs, supplies). Derived
+numbers ("lowest cost", percentage→dollar) are computed at **query time**, not stored.
 
 ## Layout — a Bun workspace monorepo (`packages/*`)
 
 - `packages/db` (`@medicost/db`) — the shared core: Postgres schema, the `Bun.sql`
-  connection (from `DATABASE_URL`), and shared row types. `bun run db:migrate` applies
-  the schema. Both `api` and `sources` import from here; nothing imports *them*.
-- `packages/api` (`@medicost/api`) — Hono API on Bun: `GET /api/health` and
-  `GET /api/search?billing_code=&description=` (filters ANDed). Async `Bun.sql` queries.
-  Port auto-increments from `PORT` (or 3000) so parallel-worktree servers don't collide.
-- `packages/sources` (`@medicost/sources`) — one file per hospital (e.g.
-  `nyu-langone-tisch.ts`) that parses that hospital's machine-readable file and calls
-  `ingestHospital()` in `lib.ts`. Ingest is **per-hospital and idempotent**: re-running a
-  source replaces only that hospital's charges, in a transaction. This is the open-source
-  contribution surface — add a hospital by adding a file.
+  connection (from `DATABASE_URL`), shared types. `bun run db:migrate` applies the schema.
+  **5 tables + 1 view:** `hospitals`, `payers`, `procedures` (distinct item + its
+  payer-less gross/cash/min/max), `procedure_codes` (1..N codes per procedure),
+  `charges` (one payer/plan rate — dollar/percentage/algorithm kept as separate raw
+  columns, never collapsed), and the `cheapest_charges` **view** (derived
+  `estimated_dollar = COALESCE(dollar, pct/100*gross)`). Both `api` and `sources` import
+  from here; nothing imports *them*.
+- `packages/api` (`@medicost/api`) — Hono API on Bun. `GET /api/health`,
+  `GET /api/search?code=<billing_code>` → all hospitals' rates for that code, cheapest
+  first (via the view). Minimal by design: no payer/description filtering yet. Port
+  auto-increments from `PORT` (or 3000) so parallel-worktree servers don't collide.
+- `packages/sources` (`@medicost/sources`) — **two-stage, registry-driven**:
+  - `registry/nyc-registry.json` (built from NYS DOH dataset by `build-registry.ts`) maps
+    each hospital → its durable `cms-hpt.txt` URL + `location_match`. Re-running ingest
+    stamps `ingested_at` + counts back into it.
+  - **Stage 1 fetch** (`src/fetch.ts`, `bun run fetch <slug>`): reads cms-hpt.txt, follows
+    the current `mrf-url`, downloads to `data/raw/` (gitignored).
+  - **Stage 2 ingest** (`src/ingest.ts`, `bun run ingest <slug>`): unzips, auto-detects
+    format (wide CSV / tall CSV / JSON → `src/parsers/*`), applies the **shoppable filter**
+    (`isShoppable` in `lib.ts`), loads Postgres. **Per-hospital & idempotent** (re-ingest
+    deletes that hospital's procedures, cascading to codes+charges, then reloads).
 - `packages/client` (`@medicost/client`) — React + Vite frontend. Talks to `api` over
   HTTP only (never touches Postgres). Builds to static `dist/`.
 
-Root scripts: `db:migrate`, `ingest`, `api:dev`, `client:dev` (each is a `bun run --filter`).
+Root scripts: `db:migrate`, `ingest`, `api:dev`, `client:dev`. (`fetch` is in the sources
+package.) Run `ingest`/`fetch` with no slug to list hospitals.
 
 ## Database & deployment
 
-- **Postgres** (local for dev/ingest, Railway managed in prod), accessed via `Bun.sql`.
-  Local dev DB: `postgres://localhost:5432/medicost`. Use the **latest** Postgres major
-  (currently 18; keep local and Railway versions matched for clean dumps).
-- **Heavy work runs locally; prod just serves.** Ingest hospital files into *local*
-  Postgres, then sync to Railway. For now sync is a full `pg_dump` → restore:
-  ```sh
-  pg_dump "$LOCAL_DATABASE_URL" | psql "$RAILWAY_DATABASE_URL"
-  ```
-  Once there are several hospitals, switch to per-hospital ingest straight against
-  Railway's `DATABASE_URL` (the schema is partitioned by `hospital_id`, so this only
-  moves one hospital's rows and never rewrites the rest).
-- **Railway**: two app services — `api` and `client` — plus one managed Postgres. The
-  client bakes the api's URL in at build via `VITE_API_URL`. No volumes (Postgres replaces
-  the old SQLite-file-on-disk approach).
+- **Postgres** (local for dev/ingest, Railway managed in prod), via `Bun.sql`. Local dev
+  DB: `postgres://localhost:5432/medicost`. Use the **latest** Postgres major (currently 18;
+  keep local and Railway matched for clean dumps).
+- **Heavy work runs locally; prod just serves.**
+- **DON'T push the full local DB to Railway.** At 25 hospitals it's ~10GB of mostly
+  patient-irrelevant grain (same procedure repeated across internal billing dimensions).
+  The intended path: **condense first** (one price per hospital × standardized code ×
+  payer/plan) into a small served slice, then sync only that. *Designing that condensed
+  slice is open work.*
+- **Railway**: two app services (`api`, `client`) + one managed Postgres. Client bakes the
+  api URL in at build via `VITE_API_URL`. No volumes.
 
-Raw hospital dumps live in `packages/sources/data/raw/` (gitignored). Heading toward a free web app with
-code + zip search across many NYC hospitals.
+Raw MRFs live in `packages/sources/data/raw/` (gitignored, large). Persistent project notes
+& decisions are in the agent memory dir (see MEMORY.md there).
 
 > **Vite exception:** the rules below say "don't use Vite" — that was written when this
 > was a Bun-only backend. It still holds for `db`/`api`/`sources`. The **`client`**
