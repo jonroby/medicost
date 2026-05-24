@@ -3,7 +3,8 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "ingest": "bun run src/nyu-langone-tisch.ts"
+    "fetch": "bun run src/fetch.ts",
+    "ingest": "bun run src/ingest.ts"
   },
   "dependencies": {
     "@medicost/db": "workspace:*",
