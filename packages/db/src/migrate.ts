@@ -6,5 +6,7 @@
 import { sql, SCHEMA } from "./index.ts";
 
 await sql.unsafe(SCHEMA);
-console.log("Schema applied: hospitals, payers, charges");
+console.log(
+  "Schema applied: hospitals, payers, procedures, procedure_codes, charges (+ cheapest_charges view)",
+);
 await sql.end();

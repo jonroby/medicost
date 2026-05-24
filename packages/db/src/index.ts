@@ -14,4 +14,9 @@ const DATABASE_URL =
 export const sql = new SQL({ url: DATABASE_URL });
 
 export { SCHEMA } from "./schema.ts";
-export type { Proc, Rate } from "./types.ts";
+export type {
+  Procedure,
+  ProcedureCode,
+  Charge,
+  CheapestCharge,
+} from "./types.ts";
