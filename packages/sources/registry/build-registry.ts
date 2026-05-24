@@ -100,10 +100,30 @@ const registry = [...byId.values()].map((r) => {
   };
 });
 
-await Bun.write(
-  `${import.meta.dir}/nyc-registry.json`,
-  JSON.stringify(registry, null, 2) + "\n",
-);
+// Preserve any ingest-tracking fields already recorded (ingest.ts writes
+// ingested_at / counts back into the registry), so a rebuild from the DOH
+// roster doesn't wipe them. Carry them over by fac_id.
+const REG_PATH = `${import.meta.dir}/nyc-registry.json`;
+const INGEST_FIELDS = [
+  "ingested_at",
+  "ingested_file",
+  "ingested_procedures",
+  "ingested_charges",
+] as const;
+let prior: Record<string, Record<string, unknown>> = {};
+if (await Bun.file(REG_PATH).exists()) {
+  for (const h of JSON.parse(await Bun.file(REG_PATH).text()) as Array<
+    Record<string, unknown>
+  >) {
+    prior[h.fac_id as string] = h;
+  }
+}
+for (const h of registry as Array<Record<string, unknown>>) {
+  const old = prior[h.fac_id as string];
+  if (old) for (const f of INGEST_FIELDS) if (f in old) h[f] = old[f];
+}
+
+await Bun.write(REG_PATH, JSON.stringify(registry, null, 2) + "\n");
 
 const resolved = registry.filter((h) => h.status === "resolved").length;
 console.log(

@@ -23,6 +23,13 @@ type RegistryEntry = {
   borough: string;
   cms_hpt_url: string | null;
   location_match: string;
+  // Ingest tracking (written back here on each successful load). Timestamps,
+  // not booleans, since the files update and we re-pull periodically. The DB
+  // will own this eventually; for now the registry records pipeline state.
+  ingested_at?: string;
+  ingested_file?: string;
+  ingested_procedures?: number;
+  ingested_charges?: number;
 };
 
 const RAW_DIR = `${import.meta.dir}/../data/raw`;
@@ -109,7 +116,8 @@ async function main() {
     return;
   }
 
-  console.log(`Ingesting ${entry.name}\n  raw: ${raw.split("/").pop()}`);
+  const rawFile = raw.split("/").pop()!;
+  console.log(`Ingesting ${entry.name}\n  raw: ${rawFile}`);
   const path = await unzipIfNeeded(raw);
 
   const hospital: Hospital = {
@@ -119,8 +127,34 @@ async function main() {
     source_url: entry.cms_hpt_url ?? undefined,
   };
 
-  await ingestHospital(hospital, await parserFor(path));
+  const counts = await ingestHospital(hospital, await parserFor(path));
   await sql.end();
+
+  // Record what we ingested, when, back into the registry (timestamp, not a
+  // boolean — these files update and we re-pull periodically).
+  await recordIngest(slug, {
+    ingested_at: new Date().toISOString(),
+    ingested_file: rawFile,
+    ingested_procedures: counts.procedures,
+    ingested_charges: counts.charges,
+  });
+  console.log(`  registry updated (ingested_at ${new Date().toISOString()})`);
+}
+
+// Re-read the registry, patch one entry's ingest fields, write it back. Re-read
+// (rather than reuse the in-memory copy) so we don't clobber concurrent edits.
+async function recordIngest(
+  slug: string,
+  fields: Pick<
+    RegistryEntry,
+    "ingested_at" | "ingested_file" | "ingested_procedures" | "ingested_charges"
+  >,
+): Promise<void> {
+  const reg: RegistryEntry[] = JSON.parse(await Bun.file(REGISTRY).text());
+  const e = reg.find((h) => h.slug === slug);
+  if (!e) return;
+  Object.assign(e, fields);
+  await Bun.write(REGISTRY, JSON.stringify(reg, null, 2) + "\n");
 }
 
 await main();

@@ -9,7 +9,11 @@
     "operator": "BronxCare Health System",
     "cms_hpt_url": "https://www.bronxcare.org/cms-hpt.txt",
     "location_match": "BronxCare Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T20:46:08.113Z",
+    "ingested_procedures": 9785,
+    "ingested_charges": 837913,
+    "ingested_file": "bronxcare-hospital-center-1164.csv"
   },
   {
     "fac_id": "1178",
@@ -45,7 +49,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Jacobi Medical Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:43:06.422Z",
+    "ingested_file": "jacobi-medical-center.zip",
+    "ingested_procedures": 341546,
+    "ingested_charges": 4140759
   },
   {
     "fac_id": "1172",
@@ -57,7 +65,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Lincoln Medical & Mental Health Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:34:19.011Z",
+    "ingested_file": "lincoln-medical-and-mental-health-center.zip",
+    "ingested_procedures": 282016,
+    "ingested_charges": 3320299
   },
   {
     "fac_id": "3058",
@@ -81,7 +93,11 @@
     "operator": "Montefiore Medical Center",
     "cms_hpt_url": "https://montefioreeinstein.org/cms-hpt.txt",
     "location_match": "Montefiore Medical Center - Henry & Lucy Moses Div",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T22:13:41.541Z",
+    "ingested_file": "montefiore-medical-center-henry-and-lucy-moses-div.csv",
+    "ingested_procedures": 2712930,
+    "ingested_charges": 2720276
   },
   {
     "fac_id": "1185",
@@ -117,7 +133,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "North Central Bronx Hospital",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:20:28.366Z",
+    "ingested_file": "north-central-bronx-hospital.zip",
+    "ingested_procedures": 176528,
+    "ingested_charges": 1336765
   },
   {
     "fac_id": "1176",
@@ -201,7 +221,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Kings County Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:40:27.141Z",
+    "ingested_file": "kings-county-hospital-center.zip",
+    "ingested_procedures": 331331,
+    "ingested_charges": 4169736
   },
   {
     "fac_id": "1305",
@@ -237,7 +261,11 @@
     "operator": "Beth Israel Medical Center Inc",
     "cms_hpt_url": "https://www.mountsinai.org/cms-hpt.txt",
     "location_match": "Mount Sinai Brooklyn",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:51:26.455Z",
+    "ingested_file": "mount-sinai-brooklyn.json",
+    "ingested_procedures": 217981,
+    "ingested_charges": 0
   },
   {
     "fac_id": "1306",
@@ -285,7 +313,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "South Brooklyn Health",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:26:17.065Z",
+    "ingested_file": "south-brooklyn-health.zip",
+    "ingested_procedures": 227696,
+    "ingested_charges": 2511434
   },
   {
     "fac_id": "1320",
@@ -309,7 +341,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Woodhull Medical & Mental Health Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:29:27.297Z",
+    "ingested_file": "woodhull-medical-and-mental-health-center.zip",
+    "ingested_procedures": 229819,
+    "ingested_charges": 2627755
   },
   {
     "fac_id": "1318",
@@ -333,7 +369,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Bellevue Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:46:22.435Z",
+    "ingested_file": "bellevue-hospital-center.zip",
+    "ingested_procedures": 399932,
+    "ingested_charges": 5043312
   },
   {
     "fac_id": "10355",
@@ -357,7 +397,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Harlem Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:32:11.944Z",
+    "ingested_file": "harlem-hospital-center.zip",
+    "ingested_procedures": 251347,
+    "ingested_charges": 2826335
   },
   {
     "fac_id": "1486",
@@ -369,7 +413,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Henry J. Carter Specialty Hospital",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T20:43:58.846Z",
+    "ingested_procedures": 8993,
+    "ingested_charges": 359517,
+    "ingested_file": "henry-j-carter-specialty-hospital.zip"
   },
   {
     "fac_id": "1447",
@@ -393,7 +441,11 @@
     "operator": "Lenox Hill Hospital",
     "cms_hpt_url": "https://lenoxhill.northwell.edu/cms-hpt.txt",
     "location_match": "Lenox Hill Hospital",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:11:13.907Z",
+    "ingested_file": "lenox-hill-hospital.json.zip",
+    "ingested_procedures": 116469,
+    "ingested_charges": 5354394
   },
   {
     "fac_id": "1453",
@@ -405,7 +457,11 @@
     "operator": "Memorial Hospital for Cancer and Allied Diseases Inc",
     "cms_hpt_url": "https://www.mskcc.org/cms-hpt.txt",
     "location_match": "Memorial Hospital for Cancer and Allied Diseases",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:08:20.117Z",
+    "ingested_file": "memorial-hospital-for-cancer-and-allied-diseases.json",
+    "ingested_procedures": 22887,
+    "ingested_charges": 508687
   },
   {
     "fac_id": "1454",
@@ -417,7 +473,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Metropolitan Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:27:49.786Z",
+    "ingested_file": "metropolitan-hospital-center.zip",
+    "ingested_procedures": 224973,
+    "ingested_charges": 2523810
   },
   {
     "fac_id": "15437",
@@ -429,7 +489,11 @@
     "operator": "Beth Israel Medical Center Inc",
     "cms_hpt_url": "https://www.mountsinai.org/cms-hpt.txt",
     "location_match": "Mount Sinai -  Behavioral Health Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:51:54.602Z",
+    "ingested_file": "mount-sinai-behavioral-health-center.json",
+    "ingested_procedures": 240204,
+    "ingested_charges": 608946
   },
   {
     "fac_id": "1456",
@@ -441,7 +505,11 @@
     "operator": "The Mount Sinai Hospital",
     "cms_hpt_url": "https://www.mountsinai.org/cms-hpt.txt",
     "location_match": "Mount Sinai Hospital",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:04:47.426Z",
+    "ingested_procedures": 239076,
+    "ingested_charges": 332055,
+    "ingested_file": "mount-sinai-hospital.json"
   },
   {
     "fac_id": "1469",
@@ -453,7 +521,11 @@
     "operator": "St Lukes Roosevelt Hospital Center Inc",
     "cms_hpt_url": "https://www.mountsinai.org/cms-hpt.txt",
     "location_match": "Mount Sinai Morningside",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:52:22.343Z",
+    "ingested_file": "mount-sinai-morningside.json",
+    "ingested_procedures": 237108,
+    "ingested_charges": 581378
   },
   {
     "fac_id": "1466",
@@ -477,7 +549,11 @@
     "operator": "NY Eye and Ear Infirmary Inc",
     "cms_hpt_url": "https://www.mountsinai.org/cms-hpt.txt",
     "location_match": "New York Eye and Ear Infirmary of Mount Sinai",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T20:44:49.280Z",
+    "ingested_procedures": 23933,
+    "ingested_charges": 141928,
+    "ingested_file": "new-york-eye-and-ear-infirmary-of-mount-sinai.json"
   },
   {
     "fac_id": "10139",
@@ -513,7 +589,11 @@
     "operator": "The New York and Presbyterian Hospital",
     "cms_hpt_url": "https://www.nyp.org/cms-hpt.txt",
     "location_match": "New York-Presbyterian Hospital - Columbia Presbyterian Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:12:27.362Z",
+    "ingested_file": "new-york-presbyterian-hospital-columbia-presbyterian-center.json.zip",
+    "ingested_procedures": 116888,
+    "ingested_charges": 949776
   },
   {
     "fac_id": "1458",
@@ -561,7 +641,11 @@
     "operator": "NYU Langone Hospitals",
     "cms_hpt_url": "https://nyulangone.org/cms-hpt.txt",
     "location_match": "NYU Langone Hospitals",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T20:48:16.073Z",
+    "ingested_procedures": 12382,
+    "ingested_charges": 3955954,
+    "ingested_file": "nyu-langone-hospitals.csv"
   },
   {
     "fac_id": "1446",
@@ -597,7 +681,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Elmhurst Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:36:37.312Z",
+    "ingested_file": "elmhurst-hospital-center.zip",
+    "ingested_procedures": 305350,
+    "ingested_charges": 3758492
   },
   {
     "fac_id": "1628",
@@ -657,7 +745,11 @@
     "operator": "The Mount Sinai Hospital",
     "cms_hpt_url": "https://www.mountsinai.org/cms-hpt.txt",
     "location_match": "Mount Sinai Hospital - Mount Sinai Hospital of Queens",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:51:10.755Z",
+    "ingested_file": "mount-sinai-hospital-mount-sinai-hospital-of-queens.json",
+    "ingested_procedures": 215605,
+    "ingested_charges": 0
   },
   {
     "fac_id": "1637",
@@ -669,7 +761,11 @@
     "operator": "NewYork-Presbyterian/Queens",
     "cms_hpt_url": "https://www.nyp.org/cms-hpt.txt",
     "location_match": "NewYork-Presbyterian/Queens",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:19:38.643Z",
+    "ingested_file": "newyork-presbyterian-queens.json.zip",
+    "ingested_procedures": 114971,
+    "ingested_charges": 810003
   },
   {
     "fac_id": "1633",
@@ -681,7 +777,11 @@
     "operator": "New York City Health and Hospitals Corporation",
     "cms_hpt_url": "https://www.nychealthandhospitals.org/cms-hpt.txt",
     "location_match": "Queens Hospital Center",
-    "status": "resolved"
+    "status": "resolved",
+    "ingested_at": "2026-05-24T21:21:49.667Z",
+    "ingested_file": "queens-hospital-center.zip",
+    "ingested_procedures": 193900,
+    "ingested_charges": 2323685
   },
   {
     "fac_id": "1635",
