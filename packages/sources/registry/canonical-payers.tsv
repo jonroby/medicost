@@ -1,0 +1,1039 @@
+# Canonical payers (company, plan, #raw_variants). Derived from payer-mapping.json.
+# The raw→canonical linkage lives in payer-mapping.json — do not lose it.
+
+1199 SEIU	1199	1
+1199 SEIU	All Commercial Plans	1
+1199 SEIU	All Products	2
+1199 SEIU	Local	1
+1199 SEIU	Local 1199 / 1115 PPO	1
+1199 SEIU	Local 1199 Commercial Inpatient	1
+1199 SEIU	Local 1199 Commercial Outpatient	1
+1199 SEIU	Local 1199 Hmecre Employ Commercial	1
+1199 SEIU	Local 1199 Nyu Member Choice	1
+1199 SEIU	Local 1199 PPO	1
+1199 SEIU	Local 1199 Seiu Homecare Benefit Fund	1
+1199 SEIU	Seiu	6
+1199 SEIU	Seiu1199	1
+
+6 Degrees Health	Comm	1
+
+Aetna	All Products	2
+Aetna	Allied	1
+Aetna	Asa	1
+Aetna	Chesterfield Resources Inc	1
+Aetna	Christian Brothers	1
+Aetna	Commercial	2
+Aetna	Commercial Bronxleb Employees	1
+Aetna	Commercial Midlevels	1
+Aetna	Commercial Mlk Employees	1
+Aetna	Commercial NYC Community	1
+Aetna	Commercial PPO	1
+Aetna	Commercial Spcc Employees	1
+Aetna	Coresource	1
+Aetna	EPO (Amex Employees)	1
+Aetna	EPO (Sunset Park Employees)	1
+Aetna	FIDA	1
+Aetna	First Health Commercial HMO	1
+Aetna	First Health Generic	1
+Aetna	Gatekeeper & Non - Gatekeeper	1
+Aetna	Geha	1
+Aetna	Global National Transplant	1
+Aetna	HMO	2
+Aetna	HMO/POS/PPO	4
+Aetna	HMO/POS/PPO Commercial	2
+Aetna	Indemnity	1
+Aetna	Medicare	3
+Aetna	Medicare Advantage	7
+Aetna	Medicare Midlevels	1
+Aetna	Meritain Health	2
+Aetna	Meritain PPO	1
+Aetna	Meritain Premier Care Network - Non Par	1
+Aetna	Mta Ma Retirees	1
+Aetna	Nippon Life - Aetna	1
+Aetna	Nippon Life Of America - Aetna	1
+Aetna	Open Access Elect Choice (EPO)	1
+Aetna	Open Access HMO	1
+Aetna	POS	1
+Aetna	POS (Amex Employees)	1
+Aetna	PPO	2
+Aetna	Premier Care Network - Non Par	1
+Aetna	Signature Administrators PPO	1
+Aetna	Signature Administrators/TPA	6
+Aetna	Starmark	1
+Aetna	Student Health	3
+Aetna	Student Plan	1
+Aetna	Wellnet	1
+Aetna	Whole Health	1
+Aetna	Whole Health/Apcn+, Premier Care Network, And NY Preferred	1
+
+Affinity (Molina)	All Nys Essential Plans	1
+Affinity (Molina)	CHP	1
+Affinity (Molina)	Essential Plan	12
+Affinity (Molina)	Essential Plan 1 - 4_200 - 250	1
+Affinity (Molina)	Essential Plan 1 & 2	1
+Affinity (Molina)	Essential Plan 200 - 250	2
+Affinity (Molina)	Essential Plan 3 & 4	2
+Affinity (Molina)	HARP	1
+Affinity (Molina)	Harp_managed Medicaid	1
+Affinity (Molina)	Health Exchange Plan	1
+Affinity (Molina)	Health Plan -	1
+Affinity (Molina)	Health Plan - CHP	1
+Affinity (Molina)	Health Plan - Essential	1
+Affinity (Molina)	Medicaid	7
+Affinity (Molina)	Medicaid - Specialists	1
+Affinity (Molina)	Medicaid/Child Health Plus	1
+Affinity (Molina)	Molina Behavioral Child Health Plus	1
+Affinity (Molina)	Molina Behavioral Essential Plan Levels 1 & 2	1
+Affinity (Molina)	Molina Behavioral Essential Plan Levels 3 & 4	1
+Affinity (Molina)	Molina Behavioral Medicaid	1
+Affinity (Molina)	Molina Child Health Plus	1
+Affinity (Molina)	Molina Essential Plan Levels 1 & 2	1
+Affinity (Molina)	Molina Essential Plan Levels 3 & 4	1
+Affinity (Molina)	Molina HARP	1
+Affinity (Molina)	Molina Hc Aff CHP	1
+Affinity (Molina)	Molina Medicaid	1
+Affinity (Molina)	Vision Child Health Plus	1
+Affinity (Molina)	Vision Medicaid	1
+
+Agewell	Medicare	1
+Agewell	New York FIDA	1
+
+Amida Care	Amidacare Behavioral Medicaid	1
+Amida Care	Amidacare Behavioral Medicare	1
+Amida Care	Amidacare Medicaid	1
+Amida Care	Care	1
+Amida Care	Care Medicaid	6
+Amida Care	Commercial_essential Plans	1
+Amida Care	GHI	1
+Amida Care	Managed Medicaid	2
+Amida Care	Managed Medicaid_harp_chp	1
+Amida Care	Map_medicare Advantage	1
+Amida Care	Medicaid	1
+
+Anthem / Empire BCBS	All Commercial Plans	1
+Anthem / Empire BCBS	All Nys Essential Plans	1
+Anthem / Empire BCBS	All Products	1
+Anthem / Empire BCBS	BCBS Blue Access EPO Large Group	1
+Anthem / Empire BCBS	BCBS Blue Access EPO Small Group	1
+Anthem / Empire BCBS	BCBS Blue Access Gepo Small Group	1
+Anthem / Empire BCBS	BCBS Blue Access PPO Large Group	1
+Anthem / Empire BCBS	BCBS Blue Connection (All Plans)	1
+Anthem / Empire BCBS	BCBS Ct HMO	1
+Anthem / Empire BCBS	BCBS Ct HMO Alt	1
+Anthem / Empire BCBS	BCBS Ct PPO Alt	1
+Anthem / Empire BCBS	BCBS Ct PPO�	1
+Anthem / Empire BCBS	BCBS EPO	1
+Anthem / Empire BCBS	BCBS EPO (Blackrock Employees)	1
+Anthem / Empire BCBS	BCBS EPO Alt	1
+Anthem / Empire BCBS	BCBS Federal Program	1
+Anthem / Empire BCBS	BCBS Florida BCBS Traditional - Ppc	1
+Anthem / Empire BCBS	BCBS Florida Blue Care HMO	1
+Anthem / Empire BCBS	BCBS Florida Blue Options PPO	1
+Anthem / Empire BCBS	BCBS Florida Blue Select	1
+Anthem / Empire BCBS	BCBS Florida Myblue HMO	1
+Anthem / Empire BCBS	BCBS Florida Simply Blue	1
+Anthem / Empire BCBS	BCBS GHI Composite	1
+Anthem / Empire BCBS	BCBS Global Transplant	2
+Anthem / Empire BCBS	BCBS HMO	1
+Anthem / Empire BCBS	BCBS Indemnity	1
+Anthem / Empire BCBS	BCBS Nys Empire	1
+Anthem / Empire BCBS	BCBS Out Of State EPO (Empty Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State EPO (No Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State EPO (Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State HMO (Empty Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State HMO (No Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State HMO (Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State POS (Empty Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State POS (No Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State POS (Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State PPO (Empty Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State PPO (No Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out Of State PPO (Suitcase Logo)	1
+Anthem / Empire BCBS	BCBS Out/State Indemnity	1
+Anthem / Empire BCBS	BCBS POS	1
+Anthem / Empire BCBS	BCBS PPO	1
+Anthem / Empire BCBS	BCBS PPO (Blackrock Employees)	1
+Anthem / Empire BCBS	BCBS PPO/EPO (Small Group)	1
+Anthem / Empire BCBS	Blue Access Large Group	1
+Anthem / Empire BCBS	Blue Access Midlevels	1
+Anthem / Empire BCBS	Blue Access Small Group	1
+Anthem / Empire BCBS	Blue_access	4
+Anthem / Empire BCBS	Child Health Plus	2
+Anthem / Empire BCBS	CHP	1
+Anthem / Empire BCBS	Commercial	2
+Anthem / Empire BCBS	Commercial Midlevels	1
+Anthem / Empire BCBS	Connection	4
+Anthem / Empire BCBS	Connection Midlevels	1
+Anthem / Empire BCBS	Connections	1
+Anthem / Empire BCBS	Daniel H Cook - Northwell Direct (BCBS Network)	1
+Anthem / Empire BCBS	Empire - Exchange Small Group (Narrow Network)	1
+Anthem / Empire BCBS	Empire Advantage Medicare PPO	1
+Anthem / Empire BCBS	Empire Bc - Blue Access Network	6
+Anthem / Empire BCBS	Empire Bc - Blue Priority HMO	4
+Anthem / Empire BCBS	Empire Bc - Blue Priority PPO	6
+Anthem / Empire BCBS	Empire Bc - Connection Network	6
+Anthem / Empire BCBS	Empire Bc - Healthplus Ep	8
+Anthem / Empire BCBS	Empire Bc - Healthplus Medicaid	4
+Anthem / Empire BCBS	Empire Bc - HMO	2
+Anthem / Empire BCBS	Empire Bc - HMO/EPO	4
+Anthem / Empire BCBS	Empire Bc - Indemnity	5
+Anthem / Empire BCBS	Empire Bc - Individual Network	6
+Anthem / Empire BCBS	Empire Bc - Medicare Advantage	5
+Anthem / Empire BCBS	Empire Bc - PPO	4
+Anthem / Empire BCBS	Empire Bc - PPO/EPO	2
+Anthem / Empire BCBS	Empire Bc - Small Group Network	4
+Anthem / Empire BCBS	Empire Bc Bs Healthplus Mcaid	1
+Anthem / Empire BCBS	Empire Bc Bs Healthplus Mcare	1
+Anthem / Empire BCBS	Empire BCBS Healthplus Network (Individual)	1
+Anthem / Empire BCBS	Empire Blue Access Large Group	1
+Anthem / Empire BCBS	Empire Blue Access Small Group	1
+Anthem / Empire BCBS	Empire Blue Cross Blueshield	1
+Anthem / Empire BCBS	Empire Bluecrssshield All Commercial	1
+Anthem / Empire BCBS	Empire Child Health Plus	1
+Anthem / Empire BCBS	Empire Commercial Bluecrshldindempos	1
+Anthem / Empire BCBS	Empire Commercial Bluecrssshield HMO	1
+Anthem / Empire BCBS	Empire Commercial Bluecrssshield PPO	1
+Anthem / Empire BCBS	Empire Commrcial Blcrssshield HMO 32b	1
+Anthem / Empire BCBS	Empire Connection	1
+Anthem / Empire BCBS	Empire Hlthplus Essential Pln 1 & 2	1
+Anthem / Empire BCBS	Empire Hlthplus Essential Pln 3 & 4	1
+Anthem / Empire BCBS	Empire HMO	1
+Anthem / Empire BCBS	Empire Indemnity	1
+Anthem / Empire BCBS	Empire Medicare	1
+Anthem / Empire BCBS	Empire Medicare HMO	1
+Anthem / Empire BCBS	Empire Optum	1
+Anthem / Empire BCBS	Empire Pathway Exchange Plan	1
+Anthem / Empire BCBS	Empire Plan/Value Options	1
+Anthem / Empire BCBS	Empire Plan/Value Options Alt	1
+Anthem / Empire BCBS	Empire PPO	1
+Anthem / Empire BCBS	EPO	1
+Anthem / Empire BCBS	EPO PPO	2
+Anthem / Empire BCBS	Essential 1 & 2	1
+Anthem / Empire BCBS	Essential 1, 2, 3, 4	1
+Anthem / Empire BCBS	Essential 3 & 4	1
+Anthem / Empire BCBS	Essential Plan	2
+Anthem / Empire BCBS	Exchange	3
+Anthem / Empire BCBS	HARP	2
+Anthem / Empire BCBS	Healthcomp - Northwell Direct (BCBS Network)	1
+Anthem / Empire BCBS	Healthcomp - Northwell Direct (Nyu Nonpar)	1
+Anthem / Empire BCBS	HMO	2
+Anthem / Empire BCBS	Hmo_sg_epo	1
+Anthem / Empire BCBS	Horizon Nj Direct	1
+Anthem / Empire BCBS	Horizon Nj Direct HMO	1
+Anthem / Empire BCBS	Hotel Trades Council	1
+Anthem / Empire BCBS	Indemnity	2
+Anthem / Empire BCBS	Local 32 Bj	1
+Anthem / Empire BCBS	Managed Medicaid_harp_mltc_map	1
+Anthem / Empire BCBS	MAP	1
+Anthem / Empire BCBS	Medicaid	4
+Anthem / Empire BCBS	Medicaid & HARP	1
+Anthem / Empire BCBS	Medicare	2
+Anthem / Empire BCBS	Medicare Advantage	4
+Anthem / Empire BCBS	Medicare Midlevels	1
+Anthem / Empire BCBS	Medicare/Dual	1
+Anthem / Empire BCBS	Mhs Employees	1
+Anthem / Empire BCBS	MLTC	1
+Anthem / Empire BCBS	Nystateofhealth Plans	1
+Anthem / Empire BCBS	PPO	1
+Anthem / Empire BCBS	Sg EPO/PPO	1
+Anthem / Empire BCBS	Small Group Epo_ppo	1
+Anthem / Empire BCBS	Wph Employees	1
+
+ArchCare	Senior Life Medicare	1
+
+Beacon	Medicaid CHP/FHP	2
+
+Beech Street	All Commercial Plans	2
+
+Block Vision	Vision Medicaid	1
+
+Centerlight	Centerlighthcare Behavioral Medicaid	1
+Centerlight	Centerlighthcare Medicare Pace	1
+Centerlight	Centerlighthcare MLTC Medicaid	1
+Centerlight	Centerlighthealthcare FIDA	1
+Centerlight	Direct	1
+Centerlight	Healthcare	1
+Centerlight	Medicare	1
+Centerlight	Pace	2
+Centerlight	Pace Medicare HMO	1
+Centerlight	Select	1
+
+Centers Plan for Healthy Living	Medicare Advan I SNP	1
+Centers Plan for Healthy Living	Medicare Advantage	2
+Centers Plan for Healthy Living	Plan For Healthy Living - Md/Dos	1
+Centers Plan for Healthy Living	Plan For Hlthy Living FIDA	1
+Centers Plan for Healthy Living	Plan For Hlthy Living MLTC	1
+Centers Plan for Healthy Living	Plan Hlthy Living Mcare Adv	1
+Centers Plan for Healthy Living	Pln Fr Hlthy Lvng Micaid Adv	1
+
+Centivo	Network	1
+
+Christian Brothers	Brothers	1
+
+Cigna	All Commercial Plans	1
+Cigna	All Plans	1
+Cigna	All Products	1
+Cigna	Cigna	1
+Cigna	Commercial	2
+Cigna	Connect EPO	1
+Cigna	Employed Physicians	1
+Cigna	Great West HMO	1
+Cigna	Great West PPO	1
+Cigna	HMO	3
+Cigna	HMO/Open Access	5
+Cigna	Humana	1
+Cigna	Indemnity	1
+Cigna	Kaiser Permanente	1
+Cigna	Life Source	1
+Cigna	Lifesource	1
+Cigna	Local Plus	1
+Cigna	Local Plus Midlevels	1
+Cigna	Localplus	7
+Cigna	Managed Care/POS	1
+Cigna	Medicare	1
+Cigna	Medicare Advantage	6
+Cigna	Medicare Advantage - Nyee	1
+Cigna	Medicare Midlevels	1
+Cigna	Mvp - Cigna Network	1
+Cigna	Mvp Preferred EPO	1
+Cigna	Mvp Select Care Inc	1
+Cigna	Mvp Value Options	1
+Cigna	Nalc	1
+Cigna	Open Access	1
+Cigna	Open Access PPO	1
+Cigna	Oscar	1
+Cigna	Paraprofessionals	1
+Cigna	PPO	8
+Cigna	Premier Plus	1
+Cigna	Tufts Health Plan	1
+Cigna	Wellfleet - Nyu Student	1
+
+Consumer Health Network	All Commercial Plans	1
+
+Davis Vision	Vision Medicaid	1
+
+Devon	All Commercial Plans	1
+
+Elderplan	HMO	1
+Elderplan	MAP	1
+Elderplan	Map_medicare Advantage_mltc	1
+Elderplan	Medicare	2
+Elderplan	Medicare Advantage	1
+Elderplan	MLTC	1
+
+EmblemHealth	All Commercial Plans	1
+EmblemHealth	All Nys Essential Plans	1
+EmblemHealth	American Plan Administrators	1
+EmblemHealth	American Plan Administrators - C/O H.D.A	1
+EmblemHealth	Cbp	1
+EmblemHealth	Commercial	1
+EmblemHealth	Commercial Midlevels	1
+EmblemHealth	Connecticare Bridge	1
+EmblemHealth	Connecticare HMO	1
+EmblemHealth	Connecticare Plan (Emblem Network)	1
+EmblemHealth	Connecticare PPO	1
+EmblemHealth	Emblem - Essential	2
+EmblemHealth	Emblem - Exchange	1
+EmblemHealth	Emblem Essential Plan 1	1
+EmblemHealth	Emblem Essential Plan 2	1
+EmblemHealth	Emblem Essential Plan 3	1
+EmblemHealth	Emblem Essential Plan 4	1
+EmblemHealth	Emblem Essential Plan Levels 1 & 2	1
+EmblemHealth	Emblem Essential Plan Levels 3 And 4	1
+EmblemHealth	Emblem GHI Network Access	4
+EmblemHealth	Emblem GHI PPO Comm	2
+EmblemHealth	Emblem GHI/HIP PPO Comm	4
+EmblemHealth	Emblem Health Bridge	1
+EmblemHealth	Emblem Healthcare Partners Essential 1	1
+EmblemHealth	Emblem Healthcare Partners Essential 2	1
+EmblemHealth	Emblem Healthcare Partners Essential 3	1
+EmblemHealth	Emblem Healthcare Partners Essential 4	1
+EmblemHealth	Emblem HIP HMO Comm	2
+EmblemHealth	Emblem HIP Medicare Advantage	5
+EmblemHealth	Emblem HIP Medicare Advantage (SNP)	1
+EmblemHealth	Emblem HIP/GHI HMO Comm	4
+EmblemHealth	Emblem Medicaid	6
+EmblemHealth	Emblem Prime Bronze	1
+EmblemHealth	Emblem Prime Gold	1
+EmblemHealth	Emblem Prime Platinum	1
+EmblemHealth	Emblem Prime Silver	1
+EmblemHealth	Emblem Select Care	5
+EmblemHealth	Emblem Select Care (Healthcare Partners)	1
+EmblemHealth	Emblem Select Care Bronze Sg	1
+EmblemHealth	Emblem Select Care EPO	1
+EmblemHealth	Emblem Select Care Gold Sg	1
+EmblemHealth	Emblem Select Care HMO	1
+EmblemHealth	Emblem Select Care Platinum Sg	1
+EmblemHealth	Emblem Select Care PPO�	1
+EmblemHealth	Emblem Select Care Silver Sg	1
+EmblemHealth	Emblemhealthghi	1
+EmblemHealth	Emblemhealthghi Medicare	1
+EmblemHealth	Emblemhealthghi PPO	1
+EmblemHealth	Emblemhealthhip Child Health Plus	1
+EmblemHealth	Emblemhealthhip Commercial	1
+EmblemHealth	Emblemhealthhip Hcreprtns Commercial	1
+EmblemHealth	Emblemhealthhip Hcreprtns Medicaid	1
+EmblemHealth	Emblemhealthhip Hcreprtns Medicare	1
+EmblemHealth	Emblemhealthhip Medicaid	1
+EmblemHealth	Emblemhealthhip Medicare	1
+EmblemHealth	Emblemhealthhip Monte Cmo Commercial	1
+EmblemHealth	Emblemhealthhip Monte Cmo Medicaid	1
+EmblemHealth	Emblemhealthhip Monte Cmo Medicare	1
+EmblemHealth	Emblemhealthhip Pt Ot Commercial	1
+EmblemHealth	Emblemhip Monte Behavioral	1
+EmblemHealth	Essential Plan	2
+EmblemHealth	Essential Plan 1 & 2	1
+EmblemHealth	Essential Plan 3 & 4	1
+EmblemHealth	GHI	1
+EmblemHealth	GHI - Bmp	1
+EmblemHealth	GHI Access Network	1
+EmblemHealth	GHI Commercial	1
+EmblemHealth	GHI Composite	1
+EmblemHealth	GHI Emblem Health EPO	1
+EmblemHealth	GHI Emblem Health Medicare HMO	1
+EmblemHealth	GHI Emblem Health Medicare PPO	1
+EmblemHealth	GHI Emblem Health PPO	1
+EmblemHealth	GHI HMO	1
+EmblemHealth	GHI Insured PPO	1
+EmblemHealth	GHI Medicare	1
+EmblemHealth	GHI Medicare Supplement	1
+EmblemHealth	GHI Net Access PPO	1
+EmblemHealth	GHI Network Access - Benefit Services Of Pa	1
+EmblemHealth	GHI Network Access - Humana	1
+EmblemHealth	GHI Network Access - Total Plan Concepts	1
+EmblemHealth	Harp_managed Medicaid	1
+EmblemHealth	HIP	1
+EmblemHealth	HIP Access I	1
+EmblemHealth	HIP Access Ii	1
+EmblemHealth	HIP Child Health Plus	1
+EmblemHealth	HIP Commerical EPO PPO	1
+EmblemHealth	HIP EPO	1
+EmblemHealth	HIP Health Plan Of NY	1
+EmblemHealth	HIP HMO	4
+EmblemHealth	HIP HMO (Healthcare Partners)	1
+EmblemHealth	HIP Lich	1
+EmblemHealth	HIP Medicaid	1
+EmblemHealth	HIP Medicaid - Enhanced Care	1
+EmblemHealth	HIP Medicaid - Enhanced Care (Healthcare Partners)	1
+EmblemHealth	HIP Medicare Optum Health - Transplant	1
+EmblemHealth	HIP Medicare PPO	1
+EmblemHealth	HIP Medicare Supplement	1
+EmblemHealth	HIP Millennium EPO/ PPO	1
+EmblemHealth	HIP Millennium Exchange	1
+EmblemHealth	HIP Millennium HMO	1
+EmblemHealth	HIP Optum Health	1
+EmblemHealth	HIP Optum Health - Transplant	1
+EmblemHealth	HIP POS	1
+EmblemHealth	HIP PPO	2
+EmblemHealth	HIP Prime Basic Exchange	1
+EmblemHealth	HIP Prime Bronze Exchange	1
+EmblemHealth	HIP Prime Gold Exchange	1
+EmblemHealth	HIP Prime Silver Exchange	1
+EmblemHealth	HIP Vip Medicare	1
+EmblemHealth	HIP Vip Medicare (Heathcare Partners)	1
+EmblemHealth	HIP Vip Medicare Bold	1
+EmblemHealth	HIP Vip Medicare Prime	1
+EmblemHealth	HIP Vip Medicare Reserve	1
+EmblemHealth	Hip_ess_1_2_amb_surg	1
+EmblemHealth	Hip_ess_1_2_hosp_op_dept	1
+EmblemHealth	Hip_ess_1_2_mr/Dd/Tbi	1
+EmblemHealth	Hip_ess_3_4_amb_surg	1
+EmblemHealth	Hip_ess_3_4_hosp_op_dept	1
+EmblemHealth	Hip_ess_3_4_mr/Dd/Tbi	1
+EmblemHealth	Hip_ghi_chp	1
+EmblemHealth	HMO/POS	1
+EmblemHealth	Iuoe Local 14 - 14b	1
+EmblemHealth	Medicaid Essential Plan	1
+EmblemHealth	Medicaid FHP CHP	1
+EmblemHealth	Medicaid/Child Health Plus	1
+EmblemHealth	Medicare	3
+EmblemHealth	Medicare Advantage	3
+EmblemHealth	Medicare Midlevels	1
+EmblemHealth	Other HIP	1
+EmblemHealth	PPO/EPO	1
+EmblemHealth	Pt/Ot Commercial	1
+EmblemHealth	Pt/Ot Government & Select	1
+EmblemHealth	Select Care	1
+EmblemHealth	Select Care Exchange Product	1
+EmblemHealth	Select Care/Millennium Network	1
+EmblemHealth	Vytra HMO	1
+EmblemHealth	Wlny - Tv Inc	1
+
+Empire Plan (NYSHIP)	The Empire Plan Nyship	1
+
+Fidelis	All Nys Essential Plans	1
+Fidelis	Care Bronze Exchange	1
+Fidelis	Care Catastrophic Cvg Exchange	1
+Fidelis	Care Child Health Plus	1
+Fidelis	Care Gold Exchange	1
+Fidelis	Care Medicaid Managed Care	1
+Fidelis	Care Native American Exchange	1
+Fidelis	Care NY - Medicare	1
+Fidelis	Care Platinum Exchange	1
+Fidelis	Care Silver Exchange	1
+Fidelis	Child Health Plus	2
+Fidelis	CHP	1
+Fidelis	Ep	5
+Fidelis	Ep 1 - 2	1
+Fidelis	Ep 1 - 2 - Nyee	1
+Fidelis	Ep 1 And 2	1
+Fidelis	Ep 3 - 4 - Nyee	1
+Fidelis	Ess_plan_prog_amb_surg	1
+Fidelis	Ess_plan_prog_hosp_op_dept	1
+Fidelis	Ess_plan_prog_mr/Dd/Tbi	1
+Fidelis	Essential	2
+Fidelis	Essential 1 & 2 (Medicaid)	1
+Fidelis	Essential 3 & 4 (Medicaid)	1
+Fidelis	Essential Plan 1 - 4_200 - 250	1
+Fidelis	Essential Plan 1 & 2	1
+Fidelis	Essential Plan 1 & 200 - 250	1
+Fidelis	Essential Plan 2	1
+Fidelis	Essential Plan 3	1
+Fidelis	Essential Plan 3 & 4	1
+Fidelis	Essential Plan 4	1
+Fidelis	Essential Plan Levels 1 And 2	1
+Fidelis	Essential Plan Levels 3 And 4	1
+Fidelis	Exchange	4
+Fidelis	Exchange Plan	1
+Fidelis	FHP	1
+Fidelis	FIDA	1
+Fidelis	HARP	2
+Fidelis	Harp_managed Medicaid	1
+Fidelis	Managed Medicaid	1
+Fidelis	MAP	1
+Fidelis	Mcd - CHP	1
+Fidelis	Medicaid	7
+Fidelis	Medicaid - FHP	1
+Fidelis	Medicaid - Nyee	1
+Fidelis	Medicaid And HARP	1
+Fidelis	Medicaid/Child Health Plus	1
+Fidelis	Medicare	2
+Fidelis	Medicare Advantage	6
+Fidelis	Medicare Advantage - Nyee	1
+Fidelis	Nystateofhealth Plans	1
+Fidelis	Qhc	1
+Fidelis	Vision Child Health Plus	1
+Fidelis	Vision Medicaid	1
+
+First Health	All Commercial Plans	2
+
+Hamaspik	Choice Medicare DSNP	1
+Hamaspik	Medicare	1
+Hamaspik	Medicare Advantage	2
+
+Healthfirst	(Mhi) Medicare Intra - Network	1
+Healthfirst	(Phsp) Medicaid Intra - Network	1
+Healthfirst	(Phsp) Medicaid Intra - Network - CHP	1
+Healthfirst	All Essential Plans	1
+Healthfirst	Blhc Child Health Plus	1
+Healthfirst	Blhc Medicaid	1
+Healthfirst	Bronze Leaf Exchange	1
+Healthfirst	Bronze Leaf Exchange - Nyu/Lmc Risk	1
+Healthfirst	Bronze Total, Pro, Plus EPO	1
+Healthfirst	Bronze Total, Pro, Plus EPO - Nyu/Lmc	1
+Healthfirst	Child Health Plus	3
+Healthfirst	Child Health Plus - Nyu/Lmc Risk	1
+Healthfirst	CHP	1
+Healthfirst	Comm	1
+Healthfirst	Commercial & Medicare	1
+Healthfirst	Commercial Enrollees	1
+Healthfirst	Commercial, Medicare & Fida_paraprofessional	1
+Healthfirst	Ess_amb_surg	1
+Healthfirst	Ess_hosp_op_dept	1
+Healthfirst	Ess_mr/Dd/Tbi	1
+Healthfirst	Essential Intra - Network	2
+Healthfirst	Essential Plan	6
+Healthfirst	Essential Plan 1&2	2
+Healthfirst	Essential Plan 200 - 250	1
+Healthfirst	Essential Plan 3 & 4	2
+Healthfirst	Essential Planlvls 1 & 2	1
+Healthfirst	Essential Planlvls 3 & 4	1
+Healthfirst	Essentials	1
+Healthfirst	Exchange	1
+Healthfirst	Exchange Intra - Network	1
+Healthfirst	Exchange Non - Risk	1
+Healthfirst	Exchange Risk	1
+Healthfirst	Exchange Small Group Intra - Network	1
+Healthfirst	Exchanges - EPO	1
+Healthfirst	Exchanges - EPO - Paraprofessional	1
+Healthfirst	FIDA	1
+Healthfirst	Gold Leaf Exchange	1
+Healthfirst	Gold Total, Pro, Plus EPO	1
+Healthfirst	Gold Total, Pro, Plus EPO - Nyu/Lmc Ri	1
+Healthfirst	Green Leaf Exchange	1
+Healthfirst	Green Leaf Exchange - Nyu/Lmc Risk	1
+Healthfirst	HARP	1
+Healthfirst	Harp_managed Medicaid HMO Primary Services	1
+Healthfirst	Harp_managed Medicaid HMO Specialist Services	1
+Healthfirst	Leaf Exchange Plan	1
+Healthfirst	Managed Medicaid	1
+Healthfirst	MAP	1
+Healthfirst	Map_medicare Advantage Primary Services	1
+Healthfirst	Map_medicare Advantage Specialist Services	1
+Healthfirst	Medicaid	3
+Healthfirst	Medicaid & Essential & HARP	1
+Healthfirst	Medicaid HARP	1
+Healthfirst	Medicaid, Essential 3&4 & HARP - Paraprofessional	1
+Healthfirst	Medicaid/Child Health Plus	1
+Healthfirst	Medicare	12
+Healthfirst	Medicare Adv HMO And PPO/Medicaid Adv Plus/Id Dual Conn (DSNP)	1
+Healthfirst	Medicare Advantage	3
+Healthfirst	Medicare Advantage PPO	1
+Healthfirst	Medicare Blhc	1
+Healthfirst	Medicare Enrollees	1
+Healthfirst	Medicare Inn/Onn	1
+Healthfirst	Medicarenonenrollees	1
+Healthfirst	Nystateofhealth Plans	1
+Healthfirst	Personal Wellness Plan	1
+Healthfirst	Platinum Leaf Exchange	1
+Healthfirst	Platinum Total, Pro, Plus EPO	1
+Healthfirst	Qhp	1
+Healthfirst	Senior Health Partners	1
+Healthfirst	Silver	1
+Healthfirst	Silver Leaf Exchange	1
+Healthfirst	Silver Total, Pro, Plus EPO	1
+Healthfirst	Small Group	1
+
+Healthplus	(CHP) Medicaid	1
+Healthplus	(FHP) Medicaid	1
+Healthplus	Amerigroup Childhealthpls	1
+Healthplus	Anthem BCBS Ct Pathway HMO�	1
+Healthplus	Anthem BCBS Ct Pathway PPO�	1
+Healthplus	BCBS Healthplus Essential Plan 1	1
+Healthplus	BCBS Healthplus Essential Plan 2	1
+Healthplus	BCBS Healthplus Essential Plan 3	1
+Healthplus	BCBS Healthplus Essential Plan 4	1
+Healthplus	BCBS Healthplus Exchange	1
+Healthplus	BCBS Healthplus NY Child Health Plus NY	1
+Healthplus	BCBS Healthplus NY Medicaid Managed Care NY	1
+Healthplus	BCBS Healthplus Special Needs	1
+Healthplus	Blue Cross Healthplus - Essential	1
+Healthplus	Medicare Advantage	1
+
+Horizon	Non Omnia	2
+Horizon	Non Omnia - Bkbislw	1
+Horizon	Omnia	2
+Horizon	Omnia - Bkbislw	1
+
+Humana	Commercial	1
+Humana	Medicare	9
+Humana	Medicare Midlevels	1
+
+Longevity	Health Plan Mcare	1
+Longevity	Medicare Advantage	1
+Longevity	Medicare Advantage SNP Plan	1
+
+Medicaid	Agewell Managed Medicaid	1
+Medicaid	Amerigroup Community Care New Jersey	1
+Medicaid	Care Plus	1
+Medicaid	Cdph Child Health Plus	1
+Medicaid	Cdph Medicaid Managed Care	1
+Medicaid	Centers Plan Medicaid Advantage Plus (MAP) (HMO D -	1
+Medicaid	Connecticut Medicaid	1
+Medicaid	Health And Recovery Plan (HARP)	1
+Medicaid	Horizon Nj Mcd HMO	1
+Medicaid	Medicaid	2
+Medicaid	Mvp Child Health Plus	1
+Medicaid	Nj/Molina	1
+Medicaid	Partners Health Plan Medicaid	1
+Medicaid	Partners Health Plan MLTC	1
+Medicaid	United Healthcare Community Of Nj	1
+Medicaid	Vnsny Choice Select Health	1
+
+Medicare	Aarp Medicare Complete	1
+Medicare	Aarp Medicare Complete Mosaic	1
+Medicare	Aarp Medicare Complete Mosaic Optum Care Ipa	1
+Medicare	Aetna Mcr Global National Transplant	1
+Medicare	Aetna Medicare Managed Care	1
+Medicare	Aetna Medicare Value Select HMO	1
+Medicare	BCBS Florida Blue Medicare HMO	1
+Medicare	BCBS Florida Blue Medicare PPO	1
+Medicare	BCBS Healthplus Mediblue Advantage	1
+Medicare	BCBS Healthplus Mediblue Dual	1
+Medicare	BCBS Healthplus Mediblue Select HMO	1
+Medicare	BCBS Mediblue Medicare HMO	1
+Medicare	BCBS Mediblue Medicare HMO (Hcp)	1
+Medicare	BCBS Mediblue Medicare PPO	1
+Medicare	BCBS Mediblue Select HMO/Extra HMO	1
+Medicare	BCBS Mediblue Select/Extra HMO (Hcp)	1
+Medicare	BCBS Medicare Global Transplant	1
+Medicare	BCBS Out Of State Medicare (No Suitcase Logo)	1
+Medicare	BCBS Out Of State Medicare (Suitcase Logo)	1
+Medicare	BCBS Senior Care Supplemental	1
+Medicare	Centers Plan For Healthy Living	1
+Medicare	Champus Unysis Corp	1
+Medicare	Champva	1
+Medicare	Cigna Medicare Advantage	1
+Medicare	Elderplan	1
+Medicare	Elderplan FIDA	1
+Medicare	Elderplan MAP	1
+Medicare	Fidelis Care Medicare	1
+Medicare	Fidelis Medicare Dual	1
+Medicare	Humana Medicare Advantage	1
+Medicare	Independence Care System	1
+Medicare	Longevity Health Plan Medicare	1
+Medicare	Metroplus Medicare	1
+Medicare	Mvp Medicare Advantage	1
+Medicare	Mynexus Alt	1
+Medicare	Oxford Health Plans Medicare Advantage	1
+Medicare	Part	1
+Medicare	Part B - Pa'S & Np'S	1
+Medicare	Partners Health Plan FIDA	1
+Medicare	Partners Health Plan Medicare	1
+Medicare	Riverspring Medicare HMO SNP	1
+Medicare	Senior Whole Health Medicare Advantage	1
+Medicare	Triwest	1
+Medicare	Uhc Aarp Medicare Complete Essential	1
+Medicare	Uhc Medicare Complete Choice Regional PPO	1
+Medicare	Uhc Medicare Complete Choice Regional PPO Optum Ipa	1
+Medicare	Umr Wtc Health Program	1
+Medicare	United Healthcare Community Medicare	1
+Medicare	United Healthcare Ins Aarp	1
+Medicare	United Healthcare Medicare	1
+Medicare	United Healthcare Medicare Optum Care Ipa	1
+Medicare	United Mcr Optum Health - Transplant	1
+Medicare	Universal Health Care	1
+Medicare	Va Ccn Optum	1
+Medicare	Village Care	1
+Medicare	Vns Medicare Advantage	1
+Medicare	World Trade Center - Logistic Health Incorporated	1
+Medicare	Wtc Health Program - Hhc	1
+Medicare	Wtc Health Program - Mt. Sinai	1
+Medicare	Wtc Health Program - Northwell	1
+Medicare	Wtc Health Program - Nyu	1
+Medicare	Wtc Health Program - Stonybrook	1
+Medicare	Wtc Health Program - Umdny/Rutgers	1
+
+MetroPlus	Beacon Behavioral Commercial	1
+MetroPlus	Bronze Plus Plan Exchange	1
+MetroPlus	Child Health Plus	2
+MetroPlus	CHP	2
+MetroPlus	Commercial	1
+MetroPlus	Default Duals	1
+MetroPlus	Ep	10
+MetroPlus	Essential	1
+MetroPlus	Essential Behavioral Levels 1 & 2	1
+MetroPlus	Essential Behavioral Levels 3 & 4	1
+MetroPlus	Essential Plan	2
+MetroPlus	Essential Plan 1 & 2 OB/Gyns	1
+MetroPlus	Essential Plan 1&2	3
+MetroPlus	Essential Plan 200 - 250	1
+MetroPlus	Essential Plan 3&4	2
+MetroPlus	Exchange	8
+MetroPlus	Exchange Plan	1
+MetroPlus	Exchange Products	1
+MetroPlus	FIDA	1
+MetroPlus	Gold	2
+MetroPlus	Gold And Gold Plus	1
+MetroPlus	Gold Goldcare2	1
+MetroPlus	Gold Plus Plan Exchange	1
+MetroPlus	Goldcare	1
+MetroPlus	Goldcare 1 & 2	1
+MetroPlus	HARP	2
+MetroPlus	Health Child Health Plus	1
+MetroPlus	Health Medicaid	1
+MetroPlus	Health Medicare	1
+MetroPlus	HIV SNP	1
+MetroPlus	Managed Medicaid	1
+MetroPlus	MAP	1
+MetroPlus	Mcd Managed Care	1
+MetroPlus	Medicaid	8
+MetroPlus	Medicaid & FHP	1
+MetroPlus	Medicaid Advantage Plus	1
+MetroPlus	Medicaid SNP HARP	1
+MetroPlus	Medicare	6
+MetroPlus	Medicare Advantage	3
+MetroPlus	Medicare Advantage - OB/GYN	1
+MetroPlus	Medplus Plan Exchange	1
+MetroPlus	Metroplus	1
+MetroPlus	NY Exchange Plans - Specialists And PCPs	1
+MetroPlus	Platinum Plus Plan Exchange	1
+MetroPlus	Silver Plus Plan Exchange	1
+MetroPlus	SNP	1
+
+MultiPlan	Administrative Concepts	1
+MultiPlan	All Commercial Plans	2
+MultiPlan	All Products	1
+MultiPlan	American Plan Administrators (Magnacare)	1
+MultiPlan	Amerihealth Administrator	1
+MultiPlan	Amerihealth Of Nj Pa De	1
+MultiPlan	Axa Assistance	1
+MultiPlan	Axa Assistance Claims Dept	1
+MultiPlan	Axa Assistance Usa	1
+MultiPlan	Axa Healthcare	1
+MultiPlan	Capital Dist Phys Health	1
+MultiPlan	Cement & Concrete Workers Dist Council	1
+MultiPlan	Comm	2
+MultiPlan	Direct Plus	1
+MultiPlan	Direct Plus Non - Fpp	1
+MultiPlan	Diversefied Admin Corp	1
+MultiPlan	Employees Security Fund	1
+MultiPlan	First Health PPO	1
+MultiPlan	Fiserv Health	1
+MultiPlan	Fiserv Health Comm	1
+MultiPlan	Global Excel Management	1
+MultiPlan	Global Excel Management I	2
+MultiPlan	Global Excel Mgmt	1
+MultiPlan	Global Excel Mgmt (Nhs)	1
+MultiPlan	Global Health Managment	1
+MultiPlan	Guardian Life Insurance Co Of America	1
+MultiPlan	Health Care Plan Inc	1
+MultiPlan	Healthnet Of California	1
+MultiPlan	Humana Commercial Health Plan	1
+MultiPlan	Independent Care Plus	1
+MultiPlan	Jib	1
+MultiPlan	Jib/Mcare/Mcaid/FIDA	1
+MultiPlan	Joint Industry Board Of Electrical Ind	1
+MultiPlan	Kaiser Foundation	1
+MultiPlan	Kaiser Permanente	1
+MultiPlan	Magna Guardian PPO	1
+MultiPlan	Magna PPO Preferred	1
+MultiPlan	Magnacare	1
+MultiPlan	Magnacare - Capital Dist Phys Health	1
+MultiPlan	Magnacare Comm	4
+MultiPlan	Magnacare Comm Preferred	4
+MultiPlan	Magnacare Comm Standard	4
+MultiPlan	Magnacare Commercial	1
+MultiPlan	Magnacare Direct Plus	1
+MultiPlan	Magnacare Direct Plus (Preferred Client)	1
+MultiPlan	Magnacare Medicaid	1
+MultiPlan	Magnacare Medicare	1
+MultiPlan	Magnacare PPO	1
+MultiPlan	Magnacare Preferred	2
+MultiPlan	Magnacare Standard	2
+MultiPlan	Meritain Health	2
+MultiPlan	Multiplan	1
+MultiPlan	Mutual Of Omaha	1
+MultiPlan	National Health Plan	1
+MultiPlan	Nippon Life - Multiplan	1
+MultiPlan	Nippon Life Ins Co - Multiplan	1
+MultiPlan	Paramount Insurance	1
+MultiPlan	Phcs	1
+MultiPlan	Phcs Director Guild	1
+MultiPlan	Phcs Multiplan	1
+MultiPlan	Phcs Savility	1
+MultiPlan	Php Healthcare(Champus)	1
+MultiPlan	Pomco Insurance Co	1
+MultiPlan	PPO	2
+MultiPlan	PPO Non - Fpp	1
+MultiPlan	Preferred	1
+MultiPlan	Principal Financial	2
+MultiPlan	Principal Financial Group	1
+MultiPlan	Principal Life Ins Co	1
+MultiPlan	Qualcare Inc	3
+MultiPlan	Screen Actors Guild	1
+MultiPlan	Standard	1
+MultiPlan	Teamsters Allied Benefits	1
+MultiPlan	Us Life Ins Co	1
+
+MVP	All Nys Essential Plans	1
+MVP	Commercial	1
+MVP	Commercial Midlevels	1
+MVP	Essential Plan 1 & 2	1
+MVP	Essential Plan 3 & 4	1
+MVP	Medicaid/Child Health Plus	1
+MVP	Medicaid/Essentials	1
+MVP	Medicaid/Essentials Midlevels	1
+MVP	Medicare	1
+MVP	Mohawk Valley Plan (Mvp) - HMO/PPO	1
+
+Nat Assoc Letter Carriers	Assoc Letter Carriers	1
+
+Nippon Life	Life Insurance	1
+
+Northwell	Direct	2
+Northwell	Northwell	1
+
+NY Hotel Trades	Hotel Trade Assn Medicare Mca	1
+NY Hotel Trades	Hotel Trade Council Commercial	1
+
+Oscar	All Products	2
+Oscar	Commercial	2
+Oscar	Commercial - Ind Members	6
+Oscar	Commercial - Small Group	3
+Oscar	Medicare	1
+
+Partners Health Plan	Health Plan FIDA	1
+Partners Health Plan	Medicaid	1
+
+Point Comfort	Indemnity	1
+
+QHM	All Commercial Plans	1
+
+Senior Health Partners	Health Partners MLTC Medicaid	1
+
+Senior Whole Health	MAP	1
+Senior Whole Health	Medicare Advantage	1
+Senior Whole Health	MLTC	1
+Senior Whole Health	Whole Health Medicare	1
+
+Somos	BCBS Healthplus Somos Essential Plan 1	1
+Somos	BCBS Healthplus Somos Essential Plan 2	1
+Somos	BCBS Healthplus Somos Essential Plan 3	1
+Somos	BCBS Healthplus Somos Essential Plan 4	1
+Somos	BCBS Healthplus Somos NY Child Health Pl	1
+Somos	BCBS Healthplus Somos NY Medicaid	1
+Somos	BCBS Healthplus Somos Special Needs HARP	1
+Somos	CHP	1
+Somos	Essential Plan 1 & 2	1
+Somos	Essential Plan 3 & 4	1
+Somos	HARP	1
+Somos	HIP Mcd Enhanced - CHP (Somos)�	1
+Somos	HIP Mcd Enhanced - Essential 1 (Somos)	1
+Somos	HIP Mcd Enhanced - Essential 2 (Somos)	1
+Somos	HIP Mcd Enhanced - Essential 3 (Somos)	1
+Somos	HIP Mcd Enhanced - Essential 4 (Somos)	1
+Somos	HIP Mcd Enhanced - NY Mcd (Somos)	1
+Somos	HIP Mcd Enhanced - SNP HARP (Somos)	1
+Somos	Medicaid	1
+
+UnitedHealthcare	All Commercial Plans	2
+UnitedHealthcare	All Nys Essential Plans	1
+UnitedHealthcare	All Payer	1
+UnitedHealthcare	All Payers	1
+UnitedHealthcare	All Products	2
+UnitedHealthcare	All Products_exchange	1
+UnitedHealthcare	Apwu Health Plan	1
+UnitedHealthcare	Child Health Plus	1
+UnitedHealthcare	CHP	2
+UnitedHealthcare	Commercial	3
+UnitedHealthcare	Commercial Midlevels	1
+UnitedHealthcare	Compass	1
+UnitedHealthcare	Compass Exchange	1
+UnitedHealthcare	Empire Plan - Midlevels	1
+UnitedHealthcare	Empire Plan Md/Dos	1
+UnitedHealthcare	Essential Plan	1
+UnitedHealthcare	Essential Plan 1 - 4_200 - 250	1
+UnitedHealthcare	Essential Plan 3 & 4	1
+UnitedHealthcare	Exchange	2
+UnitedHealthcare	Freedom	2
+UnitedHealthcare	Golden Rule Insurance	1
+UnitedHealthcare	HARP	3
+UnitedHealthcare	Liberty	2
+UnitedHealthcare	Magnacare Optum Health - Transplant	1
+UnitedHealthcare	Managed Medicaid	2
+UnitedHealthcare	Medicaid	2
+UnitedHealthcare	Medicare	3
+UnitedHealthcare	Medicare Advantage	7
+UnitedHealthcare	NY Chip	1
+UnitedHealthcare	NY Essential	1
+UnitedHealthcare	Optum Health Commercial	1
+UnitedHealthcare	Optum United Behavioral Medicaid	1
+UnitedHealthcare	Optum United Behavioral Medicare	1
+UnitedHealthcare	Oxford	1
+UnitedHealthcare	Oxford Commercial	6
+UnitedHealthcare	Oxford Freedom HMO	1
+UnitedHealthcare	Oxford Health Plans Freedom	1
+UnitedHealthcare	Oxford Health Plans Liberty	1
+UnitedHealthcare	Oxford HMO	1
+UnitedHealthcare	Oxford Indemnity	2
+UnitedHealthcare	Oxford Liberty HMO	1
+UnitedHealthcare	Oxford Medicare	1
+UnitedHealthcare	Oxford Optum Health - Transplant	1
+UnitedHealthcare	Oxford PPO	1
+UnitedHealthcare	Surest	1
+UnitedHealthcare	Umr	1
+UnitedHealthcare	United - Essential	2
+UnitedHealthcare	United - Exchange	1
+UnitedHealthcare	United Community Essential Plan 1	1
+UnitedHealthcare	United Community Essential Plan 2	1
+UnitedHealthcare	United Community Essential Plan 3	1
+UnitedHealthcare	United Community Essential Plan 4	1
+UnitedHealthcare	United Healthcare - All Payer	6
+UnitedHealthcare	United Healthcare - Essential Plan	5
+UnitedHealthcare	United Healthcare - Medicare	3
+UnitedHealthcare	United Healthcare - Medicare Advantage	1
+UnitedHealthcare	United Healthcare All Savers	1
+UnitedHealthcare	United Healthcare Choice	1
+UnitedHealthcare	United Healthcare Choice (Amex Employees)	1
+UnitedHealthcare	United Healthcare Choice (Blackrock Employees)	1
+UnitedHealthcare	United Healthcare Choice (NY Power Authority)	1
+UnitedHealthcare	United Healthcare Choice (Paramount Employees)	1
+UnitedHealthcare	United Healthcare Choice (Simon & Schuster)	1
+UnitedHealthcare	United Healthcare Community Child Health Plus	1
+UnitedHealthcare	United Healthcare Community Exchange	1
+UnitedHealthcare	United Healthcare Community Medicaid HMO	1
+UnitedHealthcare	United Healthcare EPO	1
+UnitedHealthcare	United Healthcare EPO (Sunset Park Employees)	1
+UnitedHealthcare	United Healthcare Healthscope	1
+UnitedHealthcare	United Healthcare HMO	1
+UnitedHealthcare	United Healthcare Inde	1
+UnitedHealthcare	United Healthcare Navigate	1
+UnitedHealthcare	United Healthcare Plus (Sunset Park Employees)	1
+UnitedHealthcare	United Healthcare POS	1
+UnitedHealthcare	United Healthcare PPO	1
+UnitedHealthcare	United Healthcare Spectera Eyecare Network	1
+UnitedHealthcare	United Healthcare Student Resources	1
+UnitedHealthcare	United Healthcare Student Resources (Nyu)	1
+UnitedHealthcare	United HMO	1
+UnitedHealthcare	United Medicaid	1
+UnitedHealthcare	United Medicaid Family	5
+UnitedHealthcare	United Medicaid Schip/Child	5
+UnitedHealthcare	United Medicare	1
+UnitedHealthcare	United PPO	1
+UnitedHealthcare	Unitedhealthcarecommty Essential 1n2	1
+UnitedHealthcare	Unitedhealthcarecommty Essential 3n4	1
+UnitedHealthcare	Unitedhealthcarecommty Medicaid	1
+UnitedHealthcare	Unitedhealthcarecommty Medicaid MLTC	1
+UnitedHealthcare	Unitedhealthcarecommty Medicare	1
+UnitedHealthcare	Unitedhealthcareoxford Commercial	2
+UnitedHealthcare	Unitedhealthcareoxford Medicare	2
+
+URN	Comm	1
+
+VACCN	All Products	1
+
+ValueOptions	All Comm HIP PPO/Select Care	1
+ValueOptions	HIP/Vns Choice Medicare	1
+
+Veterans Affairs	Affairs Comm Care Nwk Mcare	1
+
+VillageCareMAX	MAP	1
+VillageCareMAX	Medicare	1
+VillageCareMAX	Medicare Advantage	1
+VillageCareMAX	Village Care Max MLTC Medicaid	1
+VillageCareMAX	Village Caremax Medicare Advantage	1
+
+VNS Health	Choice	1
+VNS Health	MAP	1
+VNS Health	Medicaid	3
+VNS Health	Medicaid SNP	1
+VNS Health	Medicare	2
+VNS Health	Medicare Advantage	8
+VNS Health	Medicare Midlevels	1
+VNS Health	Medicare SNP	1
+VNS Health	Select Health Medicaid	5
+VNS Health	Vnsny Choice FIDA	1
+VNS Health	Vnsnychoice Medicaid	1
+VNS Health	Vnsnychoice Medicare	1
+VNS Health	Vnsnychoice MLTC Medicaid	1
+
+Wellcare	CHP	1
+Wellcare	Ep	3
+Wellcare	Ep 1 & 2	2
+Wellcare	Ep 1 & 2 - Nyee	1
+Wellcare	Ep 3 & 4	2
+Wellcare	Ep 3 & 4 - Nyee	1
+Wellcare	Essential Plan 1 & 2 - OB/Gyns	1
+Wellcare	Essential Plan 1 & 2 - PCPs & Specialists	1
+Wellcare	Essential Plan 3 & 4 - PCPs (Medicaid)	1
+Wellcare	Essential Plan 3 & 4 - Specialists & OB/Gyns (Medicaid)	1
+Wellcare	FIDA	1
+Wellcare	Medicaid	1
+Wellcare	Medicaid - OB/GYN	1
+Wellcare	Medicaid - Pas &	1
+Wellcare	Medicaid Specialists	1
+Wellcare	Medicaid/CHP	4
+Wellcare	Medicaid/CHP - Nyee	1
+Wellcare	Medicare	3
+Wellcare	Medicare - OB/Gyns	1
+Wellcare	Medicare - Pas &	1
+Wellcare	Medicare - PCPs	1
+Wellcare	Medicare Advantage	3
+Wellcare	Medicare Specialists	1
+Wellcare	Medicare/FIDA	5
+Wellcare	Medicare/FIDA - Nyee	1
+Wellcare	Vision Medicare	1
+Wellcare	Wellcare	1
+
+Worldwide	All Commercial Plans	1
