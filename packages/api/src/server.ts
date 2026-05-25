@@ -13,6 +13,7 @@
 //   GET /api/search?code=70551   -> rates for that billing code, cheapest first
 
 import { Hono } from "hono";
+import { cors } from "hono/cors";
 import { sql } from "@medicost/db";
 
 // One returned rate: a hospital's price for the searched code, via a payer/plan.
@@ -57,6 +58,20 @@ function searchByCode(code: string): Promise<SearchRow[]> {
 }
 
 const app = new Hono();
+
+// The client is served from a different origin (Vite dev server, or the built
+// static site in prod), so it needs CORS to call this API from the browser.
+// Allow any localhost dev port plus an optional configured prod origin.
+const allowedOrigin = process.env.CLIENT_ORIGIN;
+app.use(
+  "/api/*",
+  cors({
+    origin: (origin) =>
+      !origin || /^http:\/\/localhost:\d+$/.test(origin) || origin === allowedOrigin
+        ? origin || "*"
+        : null,
+  }),
+);
 
 app.get("/api/health", async (c) => {
   const [stats] = await sql`
