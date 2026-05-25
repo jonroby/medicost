@@ -1,13 +1,27 @@
 # Medicost
 
-Hospitals are legally required to publish machine-readable files of their prices.
-Medicost parses those files into Postgres so the prices are actually **searchable** —
-by procedure description or billing code, with each payer's negotiated rate.
+Hospitals are legally required to publish machine-readable files (MRFs) of their prices.
+Medicost fetches those files, parses them into Postgres, and serves the prices as
+**searchable** — by billing code, with each payer's negotiated rate, cheapest first.
 
-> One **charge** = one procedure at one price for one payer. A hospital has many charges.
+> One **charge** = one procedure's negotiated rate for one payer/plan. A procedure has
+> many charges; a hospital has many procedures.
 
-This is a [Bun](https://bun.com) workspace monorepo with four packages, heading toward a
-free web app with code + ZIP search across many NYC hospitals.
+This is a [Bun](https://bun.com) workspace monorepo with four packages, scoped (for now)
+to **New York City** hospitals.
+
+**Guiding principle:** keep what a *patient would search for*. We store the source
+losslessly on disk, but the database holds only patient-shoppable procedures
+(standardized CPT / HCPCS / DRG codes) — not the chargemaster noise (internal CDM codes,
+revenue codes, drugs, supplies). Derived numbers (e.g. "lowest cost") are computed at
+query time, not stored.
+
+> **Status (POC):** 25 NYC hospitals ingested, ~50M charges, ~10GB local Postgres.
+> Known next steps: (1) **collapse/condense** the data to a smaller served slice before
+> pushing to Railway (the raw grain is too big — same procedure repeats across internal
+> billing dimensions a patient doesn't care about); (2) a **payer-bucketing** table to
+> group insurer name variants (e.g. all the "Aetna …" plans) without flattening real
+> plan-level rate differences. Built to accommodate the remaining ~35 NYC hospitals.
 
 ---
 
@@ -29,12 +43,18 @@ depends on `api` or `sources`. Keep it that way.
 
 The one place that knows the database exists. Holds:
 
-- the Postgres **schema** (`hospitals`, `payers`, `charges`),
+- the Postgres **schema** — 5 tables + 1 view:
+  - `hospitals`, `payers`
+  - `procedures` — one distinct item + its payer-less charges (gross, discounted cash, min/max)
+  - `procedure_codes` — a procedure's 1..N billing codes (search-by-any-code; no "primary")
+  - `charges` — one payer/plan's rate, stored **raw**: dollar / percentage / algorithm kept
+    as separate columns, never collapsed
+  - `cheapest_charges` (view) — **derived** `estimated_dollar` = `COALESCE(dollar, pct/100 × gross)`,
+    for "lowest cost" sorting. Rebuildable; nothing committed to it.
 - the shared **`Bun.sql` connection** (reads `DATABASE_URL`),
-- the shared **row types** (`Proc`, `Rate`).
+- the shared **row types** (`Procedure`, `ProcedureCode`, `Charge`, `CheapestCharge`).
 
-Apply the schema with `bun run db:migrate`. Both `api` and `sources` import `sql` and the
-types from here, so the schema is described in exactly one place.
+Apply the schema with `bun run db:migrate`.
 
 ### `@medicost/api` — the HTTP API
 
@@ -43,26 +63,31 @@ A [Hono](https://hono.dev) server on Bun, querying Postgres with async `Bun.sql`
 | Endpoint | Returns |
 |---|---|
 | `GET /api/health` | `{ ok, hospitals, charges }` — row counts |
-| `GET /api/search?billing_code=70551` | exact billing-code match |
-| `GET /api/search?description=MRI%20brain` | description substring (case-insensitive) |
-| `GET /api/search?billing_code=…&description=…` | both filters, ANDed |
+| `GET /api/search?code=70551` | all hospitals' rates for that billing code, **cheapest first** |
 
-Each result includes the cash price, gross charge, and every payer's negotiated rate
-sorted low→high. The server's port **auto-increments** from `PORT` (default 3000) if the
-port is taken, so multiple instances (e.g. across git worktrees) don't collide.
+Minimal prototype search: one billing code in → ranked-by-price list out, across all
+loaded NYC hospitals. No payer/insurer filtering or description search yet (deliberate).
+Port **auto-increments** from `PORT` (default 3000) if taken, so instances don't collide.
 
-### `@medicost/sources` — hospital ingestion (the contribution surface)
+### `@medicost/sources` — fetch + ingest (two stages, registry-driven)
 
-Each hospital is **one file** in `packages/sources/src/` (e.g. `nyu-langone-tisch.ts`).
-A source parses that hospital's published file into `ChargeRow`s and hands them to
-`ingestHospital()` in `lib.ts`, which streams them into Postgres in batched transactions.
+Hospitals republish their MRFs constantly and the file URL changes, so we don't hardcode
+URLs. Instead a **registry** (`registry/nyc-registry.json`, seeded from the NYS DOH
+facility dataset) maps each hospital to its durable `cms-hpt.txt` URL.
 
-Ingestion is **per-hospital and idempotent**: running a source replaces only that
-hospital's charges (delete + re-insert in a transaction), leaving every other hospital
-untouched. Re-running is always safe.
+- **Stage 1 — fetch** (`src/fetch.ts`): `bun run fetch <slug>` reads the hospital's
+  `cms-hpt.txt`, follows the *current* `mrf-url`, downloads to `data/raw/` (gitignored),
+  and records a trace. Re-reading the txt each run = always the latest file.
+- **Stage 2 — ingest** (`src/ingest.ts`): `bun run ingest <slug>` finds the raw file,
+  auto-unzips, **auto-detects the format** (wide CSV / tall CSV / JSON), parses via
+  `src/parsers/*`, and loads Postgres. Records `ingested_at` + counts back into the registry.
 
-**To add a hospital:** copy `nyu-langone-tisch.ts`, adapt the parsing to that hospital's
-file format, and call `ingestHospital()` with its `ChargeRow`s. That's the whole contract.
+Ingestion is **per-hospital and idempotent** (re-ingest deletes that hospital's procedures
+→ cascades to codes + charges → reloads) and applies the **shoppable filter** (`isShoppable`
+in `lib.ts`): keeps only CPT/HCPCS/DRG-coded procedures, dropping chargemaster/drug/supply
+noise (CDM, RC, NDC, J/A/B-prefixed HCPCS, junk descriptions).
+
+Run `bun run fetch` or `bun run ingest` with no slug to list available hospitals.
 
 ### `@medicost/client` — the frontend
 
@@ -93,8 +118,9 @@ bun install                        # install all workspace deps
 createdb medicost                  # create the local dev database
 bun run db:migrate                 # apply the schema
 
-# Ingest a hospital. Put its file in packages/sources/data/raw/ first (gitignored).
-bun run ingest packages/sources/data/raw/nyu-langone-tisch.csv
+# Fetch then ingest a hospital by registry slug (run each with no slug to list them):
+bun run fetch nyu-langone-hospitals     # download its current MRF to data/raw/
+bun run ingest nyu-langone-hospitals    # parse + load into Postgres
 ```
 
 `DATABASE_URL` defaults to `postgres://localhost:5432/medicost`. Override it to point at a
@@ -123,9 +149,11 @@ curl "http://localhost:3000/api/search?description=transplant"
 | Script | Does |
 |---|---|
 | `bun run db:migrate` | apply the schema to `DATABASE_URL` |
-| `bun run ingest <file>` | ingest a hospital file into Postgres |
+| `bun run ingest <slug>` | parse + load a fetched hospital into Postgres |
 | `bun run api:dev` | run the API with hot reload |
 | `bun run client:dev` | run the frontend dev server |
+
+(`fetch` lives in the sources package: `cd packages/sources && bun run fetch <slug>`.)
 
 Each is a `bun run --filter <package> …` under the hood; you can also `cd` into a package
 and run its scripts directly.
@@ -140,18 +168,14 @@ machine and sync it up.
 **Services:** two app services — `api` and `client` — plus one **managed Postgres**.
 No volumes (Postgres replaces the old single-file SQLite database).
 
-**Sync (for now):** full dump and restore.
-
-```sh
-pg_dump "$LOCAL_DATABASE_URL" | psql "$RAILWAY_DATABASE_URL"
-```
+> **Don't push the full local DB to Railway.** At 25 hospitals it's ~10GB of mostly
+> patient-irrelevant grain (same procedure repeated across internal billing dimensions).
+> A full `pg_dump` of that is slow, costly on Railway storage/compute, and wasteful. The
+> intended path is to **condense first** (collapse to one price per hospital × standardized
+> code × payer/plan) into a much smaller served slice, then sync only that. Designing that
+> condensed slice is the current open work item.
 
 Keep your local and Railway Postgres **major versions matched** so dumps restore cleanly.
-
-**Later (multiple hospitals):** instead of re-dumping everything, point a source straight
-at Railway's `DATABASE_URL` and ingest just the new hospital. Because the data is
-partitioned by `hospital_id` and ingestion is idempotent, this only moves one hospital's
-rows and never rewrites the rest.
 
 ---
 
